@@ -379,6 +379,59 @@ if (experienceItems.length > 0) {
 
             });
 
+            /* =========================================================
+   AHMED HASHMI | IT TRAINER
+   MOBILE HAMBURGER MENU
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    if (menuBtn && navLinks) {
+
+        // Open / Close mobile menu
+        menuBtn.addEventListener("click", function () {
+            navLinks.classList.toggle("show");
+
+            // Change hamburger icon
+            if (navLinks.classList.contains("show")) {
+                menuBtn.innerHTML = "✕";
+            } else {
+                menuBtn.innerHTML = "☰";
+            }
+        });
+
+
+        // Close menu when a link is clicked
+        const links = navLinks.querySelectorAll("a");
+
+        links.forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("show");
+                menuBtn.innerHTML = "☰";
+            });
+        });
+
+
+        // Close menu if user clicks outside
+        document.addEventListener("click", function (event) {
+
+            if (
+                !navLinks.contains(event.target) &&
+                !menuBtn.contains(event.target)
+            ) {
+                navLinks.classList.remove("show");
+                menuBtn.innerHTML = "☰";
+            }
+
+        });
+
+    }
+
+});
+
         },
         {
             threshold: 0.15
