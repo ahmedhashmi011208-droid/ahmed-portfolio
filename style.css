@@ -101,6 +101,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
 }
 
 
@@ -113,6 +115,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
 }
 
 
@@ -135,6 +139,8 @@ img {
     display: flex;
     align-items: center;
     gap: 28px;
+
+    list-style: none;
 }
 
 .nav-links a {
@@ -166,28 +172,43 @@ img {
     background: var(--brown);
 
     transition: 0.3s ease;
-   
 }
 
 .nav-links a:hover::after,
 .nav-links a.active::after {
     width: 100%;
-   list-style:none;
 }
 
 
-/* MENU BUTTON */
+/* =========================================================
+   MENU BUTTON
+   ========================================================= */
 
 .menu-btn {
     display: none;
 
+    width: 42px;
+    height: 42px;
+
+    align-items: center;
+    justify-content: center;
+
     border: none;
+    outline: none;
+
     background: transparent;
 
     font-size: 28px;
+    line-height: 1;
+
     color: var(--brown-dark);
 
     cursor: pointer;
+
+    padding: 0;
+
+    position: relative;
+    z-index: 1100;
 }
 
 
@@ -1678,12 +1699,16 @@ img {
 
 @media (max-width: 700px) {
 
-    /* HEADER */
+    /* =====================================================
+       HEADER
+       ===================================================== */
 
     .header {
         top: 10px;
 
         width: 94%;
+
+        z-index: 1000;
     }
 
     .navbar,
@@ -1691,18 +1716,31 @@ img {
         min-height: 65px;
 
         padding: 0 18px;
+
+        position: relative;
     }
 
     .logo {
         font-size: 20px;
     }
 
+
+    /* =====================================================
+       HAMBURGER BUTTON
+       ===================================================== */
+
     .menu-btn {
-        display: block;
+        display: flex;
+
+        position: relative;
+
+        z-index: 1100;
     }
 
 
-    /* MOBILE NAV */
+    /* =====================================================
+       MOBILE NAVIGATION
+       ===================================================== */
 
     .nav-links {
         position: absolute;
@@ -1720,6 +1758,8 @@ img {
 
         align-items: flex-start;
 
+        justify-content: flex-start;
+
         gap: 15px;
 
         background: var(--white);
@@ -1729,10 +1769,24 @@ img {
         border-radius: 15px;
 
         box-shadow: 0 15px 35px rgba(43, 33, 28, 0.10);
+
+        list-style: none;
+
+        z-index: 1050;
     }
 
+
+    /* THIS OPENS THE MENU */
+
     .nav-links.show {
-        display: flex;
+        display: flex !important;
+    }
+
+
+    /* MOBILE LINKS */
+
+    .nav-links li {
+        width: 100%;
     }
 
     .nav-links a {
@@ -1741,10 +1795,14 @@ img {
         width: 100%;
 
         padding: 5px 0;
+
+        font-size: 14px;
     }
 
 
-    /* HERO */
+    /* =====================================================
+       HERO
+       ===================================================== */
 
     .hero {
         padding: 125px 6% 70px;
@@ -1788,7 +1846,9 @@ img {
     }
 
 
-    /* PAGE HERO */
+    /* =====================================================
+       PAGE HERO
+       ===================================================== */
 
     .page-hero,
     .skills-hero,
@@ -1815,7 +1875,9 @@ img {
     }
 
 
-    /* ABOUT */
+    /* =====================================================
+       ABOUT
+       ===================================================== */
 
     .about-section,
     .about-services,
@@ -1843,14 +1905,18 @@ img {
     }
 
 
-    /* SKILLS */
+    /* =====================================================
+       SKILLS
+       ===================================================== */
 
     .skill-card {
         padding: 28px;
     }
 
 
-    /* EXPERIENCE */
+    /* =====================================================
+       EXPERIENCE
+       ===================================================== */
 
     .experience-item {
         grid-template-columns: 1fr;
@@ -1881,7 +1947,9 @@ img {
     }
 
 
-    /* PROJECTS */
+    /* =====================================================
+       PROJECTS
+       ===================================================== */
 
     .real-project-image,
     .project-image {
@@ -1893,7 +1961,9 @@ img {
     }
 
 
-    /* CTA */
+    /* =====================================================
+       CTA
+       ===================================================== */
 
     .cta-box,
     .contact-cta-box {
@@ -1905,7 +1975,9 @@ img {
     }
 
 
-    /* CONTACT */
+    /* =====================================================
+       CONTACT
+       ===================================================== */
 
     .contact-form-box {
         padding: 28px;
