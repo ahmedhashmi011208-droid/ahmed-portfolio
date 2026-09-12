@@ -20,17 +20,21 @@ if (menuBtn && navLinks) {
         navLinks.classList.toggle("show");
 
         if (navLinks.classList.contains("show")) {
+
             menuBtn.innerHTML = "✕";
             menuBtn.setAttribute("aria-label", "Close Menu");
+
         } else {
+
             menuBtn.innerHTML = "☰";
             menuBtn.setAttribute("aria-label", "Open Menu");
+
         }
 
     });
 
 
-    /* Close menu after clicking a link */
+    /* Close menu when navigation link is clicked */
 
     const navItems = navLinks.querySelectorAll("a");
 
@@ -113,7 +117,8 @@ if (revealElements.length > 0) {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+                    entry.target.style.transform =
+                        "translateY(0)";
 
                     revealObserver.unobserve(entry.target);
 
@@ -134,7 +139,8 @@ if (revealElements.length > 0) {
 
         element.style.opacity = "0";
 
-        element.style.transform = "translateY(25px)";
+        element.style.transform =
+            "translateY(25px)";
 
         element.style.transition =
             "opacity 0.7s ease, transform 0.7s ease";
@@ -165,7 +171,9 @@ if (animatedElements.length > 0) {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
 
                     generalObserver.unobserve(entry.target);
 
@@ -186,7 +194,8 @@ if (animatedElements.length > 0) {
 
         element.style.opacity = "0";
 
-        element.style.transform = "translateY(25px)";
+        element.style.transform =
+            "translateY(25px)";
 
         element.style.transition =
             "opacity 0.7s ease, transform 0.7s ease";
@@ -215,7 +224,9 @@ if (skillCards.length > 0) {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
 
                     skillObserver.unobserve(entry.target);
 
@@ -236,7 +247,8 @@ if (skillCards.length > 0) {
 
         card.style.opacity = "0";
 
-        card.style.transform = "translateY(30px)";
+        card.style.transform =
+            "translateY(30px)";
 
         card.style.transition =
             "opacity 0.6s ease, transform 0.6s ease";
@@ -270,7 +282,9 @@ if (pageElements.length > 0) {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
 
                     pageObserver.unobserve(entry.target);
 
@@ -291,7 +305,8 @@ if (pageElements.length > 0) {
 
         element.style.opacity = "0";
 
-        element.style.transform = "translateY(25px)";
+        element.style.transform =
+            "translateY(25px)";
 
         element.style.transition =
             "opacity 0.7s ease, transform 0.7s ease";
@@ -321,7 +336,9 @@ if (experienceItems.length > 0) {
                 if (entry.isIntersecting) {
 
                     entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
+
+                    entry.target.style.transform =
+                        "translateY(0)";
 
                     experienceObserver.unobserve(entry.target);
 
@@ -342,7 +359,8 @@ if (experienceItems.length > 0) {
 
         item.style.opacity = "0";
 
-        item.style.transform = "translateY(25px)";
+        item.style.transform =
+            "translateY(25px)";
 
         item.style.transition =
             "opacity 0.6s ease, transform 0.6s ease";
