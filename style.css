@@ -1596,3 +1596,129 @@ img {
         padding: 28px 6%;
     }
 }
+
+/* =========================================================
+   PREMIUM MOBILE MENU
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* Remove UL points everywhere */
+    .nav-links,
+    .nav-links li {
+        list-style: none !important;
+    }
+
+    /* Mobile menu box */
+    .nav-links {
+        top: calc(100% + 14px) !important;
+        left: 0 !important;
+        width: 100% !important;
+
+        padding: 10px !important;
+
+        background: rgba(255, 253, 249, 0.98) !important;
+
+        border: 1px solid var(--border) !important;
+        border-radius: 20px !important;
+
+        box-shadow:
+            0 20px 50px rgba(43, 33, 28, 0.16),
+            0 5px 15px rgba(43, 33, 28, 0.06) !important;
+
+        backdrop-filter: blur(18px);
+
+        gap: 5px !important;
+
+        overflow: hidden;
+    }
+
+    /* Each menu item */
+    .nav-links li {
+        width: 100% !important;
+    }
+
+    /* Menu links */
+    .nav-links a {
+        width: 100% !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        padding: 13px 15px !important;
+
+        border-radius: 12px !important;
+
+        font-size: 14px !important;
+        font-weight: 600 !important;
+
+        color: var(--muted) !important;
+
+        transition:
+            background 0.25s ease,
+            color 0.25s ease,
+            padding-left 0.25s ease !important;
+    }
+
+    /* Remove desktop underline */
+    .nav-links a::after {
+        display: none !important;
+    }
+
+    /* Hover / active */
+    .nav-links a:hover,
+    .nav-links a.active {
+        background: var(--soft) !important;
+        color: var(--brown) !important;
+        padding-left: 20px !important;
+    }
+
+    /* Hamburger button */
+    .menu-btn {
+        width: 43px !important;
+        height: 43px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        background: var(--soft) !important;
+
+        border: 1px solid var(--border) !important;
+        border-radius: 12px !important;
+
+        color: var(--brown-dark) !important;
+
+        font-size: 24px !important;
+
+        transition: all 0.25s ease !important;
+    }
+
+    .menu-btn:hover {
+        background: var(--brown) !important;
+        color: white !important;
+        border-color: var(--brown) !important;
+    }
+
+    /* Menu opening animation */
+    .nav-links.show {
+        animation: premiumMobileMenu 0.25s ease forwards !important;
+    }
+}
+
+/* =========================================================
+   MOBILE MENU ANIMATION
+   ========================================================= */
+
+@keyframes premiumMobileMenu {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
